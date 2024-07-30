@@ -1,6 +1,6 @@
 package org.task.domain.model.usecase;
 
-import org.task.domain.model.Task;
+import org.task.domain.model.TaskEntity;
 import org.task.domain.model.repository.TaskRepository;
 
 public class CreateTaskUseCase {
@@ -10,7 +10,7 @@ public class CreateTaskUseCase {
         this.taskRepository = taskRepository;
     }
 
-    public Task createTask(Task task) {
+    public TaskEntity createTask(TaskEntity task) {
         return taskRepository.save(task);
     }
 }
